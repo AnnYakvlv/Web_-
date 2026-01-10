@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн-заказ </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>ресторан МАЩИССОЙО~</h1>
+      <img src="https://i.pinimg.com/736x/10/14/13/1014133586606da50ea6d66cba30a305.jpg" 
+      alt="Логотип ресторана" class="restaurant-logo">
+    </div>
+    
+    <div class="accent-line"></div>
+  <nav>
+      <ul id="menuTabs">
+        <li><a href="#all" class="active">Все</a></li>
+        <li><a href="#main">Основные</a></li>
+        <li><a href="#desserts">Десерты</a></li>
+        <li><a href="#drinks">Напитки</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="menu">
+        <div class="month-tag">ЯНВАРЬ 2026</div>
+        <h2>НАШЕ МЕНЮ</h2>
+        <div class="menu-items-container" id="menuContainer"></div>
+    </section>
+    <section id="cart">
+        <h2>КОРЗИНА</h2>
+        <div class="accent-line"></div>
+        <ul id="cartItems"></ul>
+        <div class="cart-summary">
+            <div class="cart-totals">
+            <div class="cart-total-row">
+                <span>Общее время приготовления:</span>
+                <span id="totalTime">0 минут</span>
+            </div>
+            <div class="cart-total-row">
+                <span>Итого к оплате:</span>
+                <span class="cart-total-price">0 руб.</span>
+            </div>
+            </div>
+        </div>
+        <div class="cart-buttons">
+        <button id="checkoutBtn" class="checkout-btn">ОФОРМИТЬ ЗАКАЗ</button>
+        <button id="clearCart">ОЧИСТИТЬ КОРЗИНУ</button>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Поварешкин</p>
+  </footer>
+  <div id="checkoutModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+      <button class="modal-close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="order-summary">
+        <h3>Ваш заказ:</h3>
+        <ul id="orderItemsList"></ul>
+        <div class="order-total">
+          <div class="order-total-row">
+            <span>Примерное время приготовления:</span>
+            <span id="modalTotalTime">0 минут</span>
+          </div>
+          <div class="order-total-row">
+            <span>Итого к оплате:</span>
+            <span id="modalTotalPrice">0 руб.</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-comments">
+        <h3>Комментарий к заказу:</h3>
+        <textarea 
+          id="orderComment" 
+          placeholder="Укажите столик, пожелания к блюдам, аллергии или другие детали..."
+          rows="4"
+        ></textarea>
+        <p class="comment-hint">Например: "Столик 5", "Без лука", "На вынос" и т.д.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="confirmOrder" class="confirm-order-btn">ПОДТВЕРДИТЬ ЗАКАЗ</button>
+      <button class="modal-cancel-btn">ОТМЕНИТЬ</button>
+    </div>
+  </div>
+</div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
