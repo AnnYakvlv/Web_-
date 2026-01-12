@@ -2,7 +2,7 @@
 import { renderMenu, renderCart, clearCart } from './modules/menu/index.js';
 import { initCheckoutModal } from './modules/checkout.js';
 import { initDishDetails } from './modules/dishDetails/index.js';
-import { menuItems } from '../data/menuItems.js';
+import { menuItems } from './data/menuItems.js';
 
 function initTabNavigation() {
   const tabs = document.querySelectorAll('#menuTabs a');
